@@ -1,0 +1,10 @@
+{
+  "name": "coreMongoDB",
+  "connector": "mongodb",
+  "url": "mongodb://dbadmin:easylancer88@localhost:27017",
+  "host": "localhost",
+  "port": 27017,
+  "user": "dbadmin",
+  "password": "easylancer88",
+  "database": "easylancer-core"
+}
