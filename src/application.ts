@@ -16,6 +16,8 @@ export class EasylancerDataApiApplication extends BootMixin(
   constructor(options: ApplicationConfig = {}) {
     super(options);
 
+    console.log("starting application");
+
     // Set up the custom sequence
     this.sequence(MySequence);
 

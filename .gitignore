@@ -64,3 +64,5 @@ api-docs/
 dist*/
 
 .DS_Store
+
+deploy/dist.tar.gz
