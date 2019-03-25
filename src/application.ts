@@ -16,8 +16,6 @@ export class EasylancerDataApiApplication extends BootMixin(
   constructor(options: ApplicationConfig = {}) {
     super(options);
 
-    console.log("starting application");
-
     // Set up the custom sequence
     this.sequence(MySequence);
 
@@ -34,10 +32,20 @@ export class EasylancerDataApiApplication extends BootMixin(
     // Customize @loopback/boot Booter Conventions here
     this.bootOptions = {
       controllers: {
-        // Customize ControllerBooter Conventions here
         dirs: ['controllers'],
-        extensions: ['.controller.js'],
-        nested: true,
+        extensions: ['.controller.js', '.controller.ts'],
+      },
+      repositories: {
+        dirs: ['repositories'],
+        extensions: ['.repository.js', '.repository.ts'],
+      },
+      datasources: {
+        dirs: ['datasources'],
+        extensions: ['.datasource.js', '.datasource.ts'],
+      },
+      services: {
+        dirs: ['services'],
+        extensions: ['.service.js', '.service.ts'],
       },
     };
   }
