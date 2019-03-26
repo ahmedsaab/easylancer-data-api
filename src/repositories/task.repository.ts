@@ -13,7 +13,7 @@ export class TaskRepository extends DefaultCrudRepository<Task, typeof Task.prot
 
   constructor(
     @inject('datasources.coreMongoDB') dataSource: CoreMongoDBDataSource,
-    @repository.getter('UserRepository') userRepositoryGetter: Getter<UserRepository>
+    @repository.getter(UserRepository) userRepositoryGetter: Getter<UserRepository>
   ) {
     super(Task, dataSource);
     this.user = this.createBelongsToAccessorFor(

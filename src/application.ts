@@ -29,7 +29,7 @@ export class EasylancerDataApiApplication extends BootMixin(
     this.component(RestExplorerComponent);
 
     this.projectRoot = __dirname;
-    // Customize @loopback/boot Booter Conventions here
+
     this.bootOptions = {
       controllers: {
         dirs: ['controllers'],

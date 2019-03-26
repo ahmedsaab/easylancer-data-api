@@ -93,7 +93,9 @@ export class TaskController {
     },
   })
   async findById(@param.path.string('id') id: string): Promise<Task> {
-    return await this.taskRepository.findById(id);
+    const task = await this.taskRepository.findById(id);
+    task.ownerUser = this.taskRepository.user(id);
+    return task;
   }
 
   @patch('/tasks/{id}', {
